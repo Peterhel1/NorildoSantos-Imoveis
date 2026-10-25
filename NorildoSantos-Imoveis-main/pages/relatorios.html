@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Relatórios de Performance | Norildo Santos — Administração</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body class="admin-body">
+  <script src="../js/icons.js"></script>
+
+  <div class="admin">
+    <!-- Barra lateral -->
+    <aside class="sidebar" id="sidebar" aria-label="Menu administrativo">
+      <div class="sidebar__brand">
+        <a href="../index.html">Norildo Santos</a>
+        <span>Painel de Gestão</span>
+      </div>
+
+      <nav class="sidebar__nav" aria-label="Seções da administração">
+        <a class="sidebar__link" href="dashboard.html">
+          <svg class="icon" aria-hidden="true"><use href="#i-dashboard"/></svg>Dashboard
+        </a>
+        <a class="sidebar__link" href="admImoveis.html">
+          <svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>Meus Imóveis
+        </a>
+        <a class="sidebar__link" href="#leads">
+          <svg class="icon" aria-hidden="true"><use href="#i-leads"/></svg>Leads
+        </a>
+        <a class="sidebar__link" href="relatorios.html" aria-current="page">
+          <svg class="icon" aria-hidden="true"><use href="#i-reports"/></svg>Relatórios
+        </a>
+        <a class="sidebar__link" href="#configuracoes">
+          <svg class="icon" aria-hidden="true"><use href="#i-settings"/></svg>Configurações
+        </a>
+      </nav>
+
+      <div class="sidebar__foot">
+        <a class="sidebar__link" href="#suporte">
+          <svg class="icon" aria-hidden="true"><use href="#i-help"/></svg>Suporte
+        </a>
+        <a class="sidebar__link" href="../index.html">
+          <svg class="icon" aria-hidden="true"><use href="#i-logout"/></svg>Sair
+        </a>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" aria-hidden="true"></div>
+
+    <div class="admin__main">
+      <!-- Barra superior -->
+      <header class="topbar">
+        <button class="icon-btn topbar__menu" type="button" data-sidebar-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+
+        <a class="topbar__title" href="../pages/dashboard.html">Dashboard</a>
+
+        <div class="topbar__search">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+          <input type="search" placeholder="Buscar imóveis, leads..." aria-label="Buscar nas transações" data-filter="#tabela-transacoes" autocomplete="off">
+        </div>
+
+        <div class="topbar__actions">
+          <button class="icon-btn" type="button" aria-label="Notificações">
+            <svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg>
+          </button>
+          <a class="btn btn--primary btn--sm" href="#novo-imovel">
+            <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg>
+            <span class="btn-label">Novo Imóvel</span>
+          </a>
+        </div>
+      </header>
+
+      <main class="admin-content">
+        <!-- Título e ações -->
+        <div class="page-head">
+          <div>
+            <h1>Relatórios de Performance</h1>
+            <p>Visão detalhada das métricas de vendas e engajamento.</p>
+          </div>
+
+          <div class="page-head__actions">
+            <button class="btn-report btn-report--outline" type="button" data-action="exportar">
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+              Exportar PDF
+            </button>
+            <button class="btn-report btn-report--slate" type="button" data-action="filtrar">
+              Filtrar Período
+            </button>
+          </div>
+        </div>
+
+        <!-- Indicadores -->
+        <section class="kpis" aria-label="Indicadores de performance">
+          <article class="report-card">
+            <div class="kpi__top">
+              <span class="kpi__icon"><svg class="icon" aria-hidden="true"><use href="#i-trending"/></svg></span>
+              <span class="delta delta--up">+12.4%</span>
+            </div>
+            <h2 class="kpi__label">Retorno sobre investimento</h2>
+            <p class="kpi__value">4.2x ROI</p>
+          </article>
+
+          <article class="report-card">
+            <div class="kpi__top">
+              <span class="kpi__icon"><svg class="icon" aria-hidden="true"><use href="#i-click"/></svg></span>
+              <span class="delta delta--up">+3.2%</span>
+            </div>
+            <h2 class="kpi__label">Taxa de conversão</h2>
+            <p class="kpi__value">18.5%</p>
+          </article>
+
+          <article class="report-card">
+            <div class="kpi__top">
+              <span class="kpi__icon"><svg class="icon" aria-hidden="true"><use href="#i-banknote"/></svg></span>
+              <span class="delta delta--down">-1.5%</span>
+            </div>
+            <h2 class="kpi__label">Receita total</h2>
+            <p class="kpi__value">R$ 14.2M</p>
+          </article>
+        </section>
+
+        <!-- Vendas mensais e status -->
+        <div class="report-grid">
+          <section class="report-card" aria-labelledby="titulo-vendas">
+            <div class="report-card__head">
+              <h2 class="report-card__title" id="titulo-vendas">Vendas Mensais</h2>
+              <div class="select-wrap">
+                <select id="periodo-vendas" aria-label="Período do gráfico de vendas">
+                  <option value="12">Últimos 12 meses</option>
+                  <option value="6">Últimos 6 meses</option>
+                  <option value="3">Últimos 3 meses</option>
+                </select>
+                <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+              </div>
+            </div>
+
+            <div class="chart" id="grafico-vendas"></div>
+          </section>
+
+          <section class="report-card" aria-labelledby="titulo-status">
+            <h2 class="report-card__title" id="titulo-status">Status dos Imóveis</h2>
+
+            <div class="donut">
+              <svg viewBox="0 0 200 200" role="img" aria-label="Status dos imóveis: 42% disponíveis, 38% em negociação e 20% vendidos">
+                <g transform="rotate(-90 100 100)" fill="none" stroke-width="20">
+                  <circle cx="100" cy="100" r="90" pathLength="100" stroke="#545f7a" stroke-dasharray="41.2 58.8"/>
+                  <circle cx="100" cy="100" r="90" pathLength="100" stroke="#bcc3e0" stroke-dasharray="37.2 62.8" stroke-dashoffset="-42"/>
+                  <circle cx="100" cy="100" r="90" pathLength="100" stroke="#dde6fb" stroke-dasharray="19.2 80.8" stroke-dashoffset="-80"/>
+                </g>
+              </svg>
+              <div class="donut__center">
+                <strong>842</strong>
+                <span>TOTAL</span>
+              </div>
+            </div>
+
+            <ul class="legend">
+              <li><span class="legend__dot" style="background:#545f7a"></span>Disponíveis<span class="legend__value">42%</span></li>
+              <li><span class="legend__dot" style="background:#bcc3e0"></span>Em Negociação<span class="legend__value">38%</span></li>
+              <li><span class="legend__dot" style="background:#dde6fb"></span>Vendidos<span class="legend__value">20%</span></li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Origem dos leads -->
+        <section class="report-card report-block" aria-labelledby="titulo-leads">
+          <div class="report-card__head">
+            <h2 class="report-card__title" id="titulo-leads">Origem dos Leads</h2>
+            <div class="bar-legend" aria-hidden="true">
+              <span><i style="background:#545f7a"></i>Orgânico</span>
+              <span><i style="background:#bcc3e0"></i>Pago</span>
+            </div>
+          </div>
+
+          <ul class="lead-list">
+            <li>
+              <div class="lead__head"><span>Instagram</span><span>45%</span></div>
+              <div class="lead__bar" title="Orgânico 45% · Pago 20%">
+                <span class="lead__organic" style="width:45%"></span>
+                <span class="lead__paid" style="width:20%"></span>
+              </div>
+            </li>
+            <li>
+              <div class="lead__head"><span>Google Search</span><span>30%</span></div>
+              <div class="lead__bar" title="Orgânico 30% · Pago 40%">
+                <span class="lead__organic" style="width:30%"></span>
+                <span class="lead__paid" style="width:40%"></span>
+              </div>
+            </li>
+            <li>
+              <div class="lead__head"><span>Referral</span><span>15%</span></div>
+              <div class="lead__bar" title="Orgânico 15% · Pago 10%">
+                <span class="lead__organic" style="width:15%"></span>
+                <span class="lead__paid" style="width:10%"></span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Transações recentes -->
+        <section class="report-card report-card--flush report-block" aria-labelledby="titulo-transacoes">
+          <h2 class="report-card__title" id="titulo-transacoes">Transações Recentes</h2>
+
+          <div class="table-wrap">
+            <table class="data-table data-table--report" id="tabela-transacoes">
+              <thead>
+                <tr>
+                  <th scope="col">Imóvel</th>
+                  <th scope="col">Corretor</th>
+                  <th scope="col">Valor</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Data</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="property">
+                      <span class="thumb"><img src="img/transacao-1.jpg" alt="" loading="lazy" data-fallback></span>
+                      <strong class="property__name">Villa Malaparte Repr.</strong>
+                    </div>
+                  </td>
+                  <td class="corretor">Ricardo Mendes</td>
+                  <td class="num">R$ 4.250.000</td>
+                  <td><span class="status-tag status-tag--done">Concluído</span></td>
+                  <td class="data">12 Out, 2023</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="property">
+                      <span class="thumb"><img src="img/transacao-2.jpg" alt="" loading="lazy" data-fallback></span>
+                      <strong class="property__name">Penthouse Skyline</strong>
+                    </div>
+                  </td>
+                  <td class="corretor">Ana Claudia L.</td>
+                  <td class="num">R$ 2.800.000</td>
+                  <td><span class="status-tag status-tag--review">Revisão</span></td>
+                  <td class="data">10 Out, 2023</td>
+                </tr>
+
+                <tr class="table-empty" hidden>
+                  <td colspan="5">Nenhuma transação encontrada.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/admin.js" defer></script>
+</body>
+</html>

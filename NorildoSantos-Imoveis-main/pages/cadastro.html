@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cadastro - Norildo Santos Corretor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/comum.css" />
+    <link rel="stylesheet" href="../styles/cadastro.css" />
+    <script src="../js/cadastro.js" defer></script>
+  </head>
+  <body>
+    <aside class="imagem-lateral">
+      <img
+        alt="Imóvel de luxo"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuADapuyiwHIOalSxuxiO4aaN2w3AxoGDCnIovF94F3XYBnq1xpa9NkrDryyZkqOu8SQJ5CwzfeLFnWisIAy38cCJLr83N5vvcGVpzKrdsRILHeFtUk2LghUumJ5oeACiCNjMKcyClL1KnW6M5a0If6-NuXeiXW9svZc5KSTIx2Cl-c7mJYCOA4KpL2LPFg1rKFC-GnFziHJDvHzPuO9e4NH8vbA5xT-mpgEuv2iSEd6H3x_zIgbnb6wE-2VX-6Os7keA6vckrTtKg"
+      />
+    </aside>
+
+    <main class="painel-formulario">
+      <div class="formulario">
+        <div class="logo">Norildo Santos</div>
+        <header>
+          <h1>Criar Conta</h1>
+          <p>Preencha os dados abaixo para iniciar sua jornada exclusiva.</p>
+        </header>
+
+        <form>
+          <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" required type="text" />
+          </div>
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" required type="email" />
+          </div>
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <input id="senha" name="senha" required type="password" />
+            <button aria-label="Mostrar senha" class="ver-senha" type="button">
+              <span class="icone">visibility_off</span>
+            </button>
+          </div>
+          <div class="campo">
+            <label for="confirmar-senha">Confirmação de Senha</label>
+            <input
+              id="confirmar-senha"
+              name="confirmar-senha"
+              required
+              type="password"
+            />
+          </div>
+          <label class="termos"
+            ><input id="termos" name="termos" required type="checkbox" />
+            <span
+              >Li e concordo com os <a href="#">Termos de uso</a> e a
+              <a href="#">Política de privacidade</a>.</span
+            ></label
+          >
+          <button class="botao" type="submit">
+            Cadastrar <span class="icone">arrow_forward</span>
+          </button>
+        </form>
+
+        <p class="rodape-formulario">
+          Já possui uma conta? <a href="login.html">Entrar</a>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

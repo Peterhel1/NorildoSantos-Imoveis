@@ -1,0 +1,254 @@
+/* Cores e medidas compartilhadas */
+:root {
+  --cor-principal: #5d5f5f;
+  --cor-secundaria: #565e74;
+  --cor-fundo: #f8f9ff;
+  --cor-branco: #ffffff;
+  --cor-texto: #0b1c30;
+  --cor-texto-suave: #444748;
+  --cor-fundo-suave: #eff4ff;
+  --cor-fundo-medio: #e5eeff;
+  --cor-destaque: #dae2fd;
+  --cor-texto-destaque: #5c647a;
+  --cor-borda: #c4c7c8;
+  --cor-contorno: #747878;
+  --cor-erro: #ba1a1a;
+  --cor-whatsapp: #128c7e;
+  --sombra: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --largura-maxima: 1280px;
+  --fonte-titulo: "Playfair Display", serif;
+  --fonte-texto: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.icone {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+  vertical-align: middle;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Cabeçalho do site */
+.cabecalho {
+  background: var(--cor-branco);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: box-shadow 0.3s;
+}
+.cabecalho.rolado {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.cabecalho > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 16px;
+}
+.cabecalho nav {
+  display: none;
+  gap: 24px;
+}
+.cabecalho nav a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--cor-texto-suave);
+  padding-bottom: 4px;
+}
+.cabecalho nav a:hover,
+.cabecalho nav a.ativo {
+  color: var(--cor-texto);
+}
+.cabecalho nav a.ativo {
+  border-bottom: 2px solid var(--cor-texto);
+}
+.cabecalho .acoes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cabecalho .acoes a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: none;
+}
+.cabecalho .acoes a:hover {
+  background: var(--cor-fundo-suave);
+}
+
+/* Botões */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--cor-texto);
+  color: var(--cor-branco);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 8px 24px;
+  border-radius: 8px;
+  transition:
+    opacity 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.botao:hover {
+  opacity: 0.9;
+}
+.botao-contorno {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--cor-principal);
+  color: var(--cor-principal);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.botao-contorno:hover {
+  background: var(--cor-principal);
+  color: var(--cor-branco);
+}
+
+/* Caixa branca com sombra */
+.caixa {
+  background: var(--cor-branco);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+}
+
+/* Rodapé */
+.rodape {
+  background: var(--cor-fundo-suave);
+  border-top: 1px solid var(--cor-borda);
+  padding: 48px 0;
+}
+.rodape > div {
+  display: grid;
+  gap: 24px;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.rodape .logo {
+  margin-bottom: 16px;
+}
+.rodape p {
+  color: var(--cor-texto-suave);
+  margin-bottom: 16px;
+}
+.rodape small {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+}
+.rodape h4 {
+  font-family: var(--fonte-texto);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.rodape ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rodape ul a {
+  color: var(--cor-texto-suave);
+}
+.rodape ul a:hover {
+  color: var(--cor-principal);
+}
+
+@media (min-width: 768px) {
+  .cabecalho > div,
+  .rodape > div {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .cabecalho nav {
+    display: flex;
+  }
+  .cabecalho .acoes a {
+    display: inline-block;
+  }
+  .rodape > div {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}

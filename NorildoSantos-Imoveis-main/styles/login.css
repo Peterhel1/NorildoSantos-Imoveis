@@ -1,0 +1,227 @@
+body {
+  background: var(--cor-branco);
+}
+.tela {
+  display: flex;
+  min-height: 100vh;
+}
+
+.imagem-lateral {
+  display: none;
+  position: relative;
+  width: 50%;
+  background: #d3e4fe center / cover no-repeat
+    url("https://lh3.googleusercontent.com/aida-public/AB6AXuApfOfCx0c6NMEKIAthuyS1ZaSByjsSFwV-FJet_4LsVEXkc-3DyQ0Vtgr2k7FHixFXSMKueBNWMgqxl-kLf7mDoyabF1KB--TVUINM0zxcJWGKejSjlpfPT05Q_IIZTQAo5EfRL4C1cTRh1Va-z-6kCWdm3vENWT1jS6PGUtJjpQKGxa5oBqcL6gENggCO8bwgO3BCgWwdIPf5mGI9mLTY5nc_lj3bKwEU0JrudmKvN10JQNi5Z_r39lbXpQqoHz3HqzLJZD6jbA");
+}
+.citacao {
+  position: absolute;
+  left: 48px;
+  right: 48px;
+  bottom: 48px;
+  padding: 24px;
+  border-radius: 8px;
+  background: rgba(11, 28, 48, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--cor-branco);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.citacao .destaque {
+  font-family: var(--fonte-titulo);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.citacao p:last-child {
+  opacity: 0.9;
+}
+
+.painel-formulario {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.formulario {
+  width: 100%;
+  max-width: 420px;
+}
+
+.marca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.selo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--cor-texto);
+  color: var(--cor-branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-titulo);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.marca h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.marca p {
+  color: var(--cor-texto-suave);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.campo label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--cor-texto-suave);
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+.campo > div {
+  position: relative;
+}
+.campo .icone {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--cor-borda);
+  transition: color 0.2s;
+}
+.campo input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--cor-borda);
+  background: transparent;
+  padding: 8px 40px 8px 32px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.campo input::placeholder {
+  color: rgba(196, 199, 200, 0.8);
+}
+.campo:focus-within label,
+.campo:focus-within .icone {
+  color: var(--cor-principal);
+}
+.campo input:focus {
+  border-color: var(--cor-principal);
+}
+.ver-senha {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--cor-borda);
+}
+.ver-senha .icone {
+  position: static;
+  transform: none;
+  font-size: 20px;
+}
+.ver-senha:hover .icone {
+  color: var(--cor-texto);
+}
+
+.opcoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+}
+.opcoes label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--cor-texto-suave);
+  cursor: pointer;
+}
+.opcoes input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--cor-principal);
+}
+.opcoes a {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cor-principal);
+}
+.opcoes a:hover {
+  color: var(--cor-texto);
+  text-decoration: underline;
+}
+
+form .botao {
+  margin-top: 12px;
+  width: 100%;
+  padding: 16px 24px;
+}
+form .botao:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+form .botao .icone {
+  font-size: 18px;
+}
+
+.rodape-formulario {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(196, 199, 200, 0.3);
+  text-align: center;
+  color: var(--cor-texto-suave);
+}
+.rodape-formulario a {
+  margin-left: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cor-texto);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.rodape-formulario a:hover {
+  color: var(--cor-principal);
+}
+
+@media (min-width: 768px) {
+  .imagem-lateral {
+    display: block;
+    width: 42%;
+  }
+  .painel-formulario {
+    padding: 48px;
+  }
+  .marca {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .marca h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+}
+@media (min-width: 1024px) {
+  .imagem-lateral {
+    width: 50%;
+  }
+}

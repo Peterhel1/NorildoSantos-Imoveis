@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login - Norildo Santos Corretor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/comum.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <script src="../js/login.js" defer></script>
+  </head>
+  <body>
+    <div class="tela">
+      <aside class="imagem-lateral">
+        <div class="citacao">
+          <p class="destaque">Exclusividade e Precisão.</p>
+          <p>
+            Acesso restrito a um portfólio selecionado de imóveis de alto
+            padrão.
+          </p>
+        </div>
+      </aside>
+
+      <main class="painel-formulario">
+        <div class="formulario">
+          <div class="marca">
+            <span class="selo">NS</span>
+            <div>
+              <h1>Norildo Santos</h1>
+              <p>Corretor de Imóveis Exclusivos</p>
+            </div>
+          </div>
+
+          <form>
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <div>
+                <span class="icone">mail</span>
+                <input
+                  id="email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  required
+                  type="email"
+                />
+              </div>
+            </div>
+            <div class="campo">
+              <label for="password">Senha</label>
+              <div>
+                <span class="icone">lock</span>
+                <input
+                  id="password"
+                  name="password"
+                  placeholder="••••••••"
+                  required
+                  type="password"
+                />
+                <button
+                  aria-label="Mostrar senha"
+                  class="ver-senha"
+                  type="button"
+                >
+                  <span class="icone">visibility_off</span>
+                </button>
+              </div>
+            </div>
+            <div class="opcoes">
+              <label><input type="checkbox" /> Lembrar-me</label>
+              <a href="#">Esqueci minha senha</a>
+            </div>
+            <button class="botao" type="submit">
+              Entrar <span class="icone">arrow_forward</span>
+            </button>
+          </form>
+
+          <p class="rodape-formulario">
+            Ainda não possui acesso?
+            <a href="cadastro.html">Criar nova conta</a>
+          </p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,334 @@
+/* ==========================================================
+   Página Contato
+   Complementa styles.css (cabeçalho, botões, variáveis)
+   ========================================================== */
+
+.icon--solid {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* ---------- Introdução ---------- */
+.contact { padding: 56px 0 96px; }
+
+.contact__intro h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 4.4vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+
+.contact__intro p {
+  max-width: 700px;
+  margin-top: 16px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #4a5468;
+}
+
+/* ---------- Grade principal ---------- */
+.contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  align-items: start;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+/* ---------- Formulário ---------- */
+.form-card {
+  padding: 48px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-card h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 24px;
+  margin-top: 28px;
+}
+
+.form-field--full { grid-column: 1 / -1; }
+
+.form-field label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #cfd3da;
+  border-radius: 0;
+  outline: 0;
+  transition: border-color 0.2s ease;
+}
+
+.form-field textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #c5cad6;
+  opacity: 1;
+}
+
+.form-field input:focus,
+.form-field textarea:focus { border-bottom-color: var(--navy); }
+
+.form-field input:user-invalid,
+.form-field textarea:user-invalid { border-bottom-color: #d93636; }
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 20px;
+  margin-top: 8px;
+}
+
+.btn--submit {
+  padding: 13px 32px;
+  font-size: 0.8125rem;
+  letter-spacing: 0.03em;
+}
+
+.form-status {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.form-status.is-success { color: #1f9d55; }
+
+/* ---------- Informações ---------- */
+.contact__side { display: grid; gap: 24px; }
+
+.info-card {
+  padding: 24px 24px 28px;
+  background: #eef3fe;
+  border-radius: var(--radius);
+}
+
+.info-card h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.info-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.info-list .icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  color: #3d4351;
+}
+
+.info-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #4a5468;
+}
+
+.info-list address,
+.info-list a {
+  font-size: 1.0625rem;
+  font-style: normal;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.info-list a:hover { text-decoration: underline; }
+
+.info-social {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid #d9e1f2;
+}
+
+.info-social h3 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+}
+
+.info-social__buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.social-btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: var(--navy);
+  background: transparent;
+  border: 1px solid #c5cde0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.social-btn .icon { width: 18px; height: 18px; }
+
+.social-btn:hover,
+.social-btn.is-copied {
+  background: #fff;
+  border-color: var(--navy);
+}
+
+/* ---------- Mapa ---------- */
+.map-card {
+  position: relative;
+  aspect-ratio: 15 / 8;
+  overflow: hidden;
+  background: #c3cad9;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.map-card__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.map-card__link {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(15, 29, 53, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-card__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 29, 53, 0.22);
+}
+
+.map-card__link .icon { width: 16px; height: 16px; }
+
+/* ---------- Rodapé desta página ---------- */
+.site-footer--alt {
+  padding: 48px 0 40px;
+  background: #eef3fe;
+  border-top: 1px solid #d4dbea;
+}
+
+.site-footer--alt .footer__grid {
+  grid-template-columns: minmax(0, 2.08fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.footer__name {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.site-footer--alt .footer__brand p {
+  max-width: 400px;
+  margin-top: 12px;
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  color: #4a5468;
+}
+
+.site-footer--alt .footer__brand .footer__copy {
+  max-width: none;
+  margin-top: 24px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.site-footer--alt .footer__col h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.site-footer--alt .footer__col ul {
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.site-footer--alt .footer__col a {
+  font-size: 1rem;
+  color: #4a5468;
+}
+
+.site-footer--alt .footer__col a:hover { color: var(--navy); }
+
+/* ==========================================================
+   Responsivo
+   ========================================================== */
+@media (max-width: 960px) {
+  .contact__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 860px) {
+  .site-footer--alt .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .site-footer--alt .footer__brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 600px) {
+  .contact { padding: 40px 0 64px; }
+  .form-card { padding: 28px 20px; }
+  .form-grid { grid-template-columns: 1fr; gap: 24px; }
+  .contact__grid { margin-top: 32px; }
+}

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Norildo Santos Admin - Meus Imóveis</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/comum.css" />
+    <link rel="stylesheet" href="../styles/admImoveis.css" />
+    <link rel="stylesheet" href="../styles/admin.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+
+    <script src="../js/admImoveis.js" defer></script>
+  </head>
+  <body>
+    <script src="../js/icons.js"></script>
+
+    <aside class="barra-lateral" id="barra-lateral">
+      <div class="sidebar__brand">
+        <a href="../index.html">Norildo Santos</a>
+        <span>Painel de Gestão</span>
+      </div>
+      <nav class="sidebar__nav" aria-label="Seções da administração">
+        <a class="sidebar__link" href="dashboard.html">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-dashboard" />
+          </svg>
+          Dashboard
+        </a>
+        <a class="sidebar__link" href="admImoveis.html" aria-current="page">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-building" />
+          </svg>
+          Meus Imóveis
+        </a>
+        <a class="sidebar__link" href="#leads">
+          <svg class="icon" aria-hidden="true"><use href="#i-leads" /></svg>
+          Leads
+        </a>
+        <a class="sidebar__link" href="relatorios.html">
+          <svg class="icon" aria-hidden="true"><use href="#i-reports" /></svg>
+          Relatórios
+        </a>
+        <a class="sidebar__link" href="#configuracoes">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-settings" />
+          </svg>
+          Configurações
+        </a>
+      </nav>
+      <div class="sidebar__foot">
+        <a class="sidebar__link" href="#suporte">
+          <svg class="icon" aria-hidden="true"><use href="#i-help" /></svg>
+          Suporte
+        </a>
+        <a class="sidebar__link" href="../index.html">
+          <svg class="icon" aria-hidden="true"><use href="#i-logout" /></svg>
+          Sair
+        </a>
+      </div>
+    </aside>
+    <div class="fundo-escuro" id="fundo-escuro"></div>
+
+    <header class="barra-topo">
+      <div class="esquerda">
+        <h1 class="topbar__title">Dashboard</h1>
+        <label class="pesquisa"
+          ><span class="icone">search</span
+          ><input placeholder="Buscar imóveis..." type="text"
+        /></label>
+      </div>
+      <div class="direita">
+        <button class="botao-icone">
+          <span class="icone">notifications</span>
+        </button>
+        <button class="botao-icone">
+          <span class="icone">account_circle</span>
+        </button>
+        <button class="botao">
+          <span class="icone">add</span> NOVO IMÓVEL
+        </button>
+      </div>
+    </header>
+
+    <main class="conteudo">
+      <section class="cabecalho-pagina">
+        <div>
+          <h2>Meus Imóveis</h2>
+          <p>Gerencie seu portfólio de propriedades exclusivas.</p>
+        </div>
+        <div class="botoes">
+          <button><span class="icone">filter_list</span> FILTROS</button>
+          <button><span class="icone">download</span> EXPORTAR</button>
+        </div>
+      </section>
+
+      <section class="filtros-rapidos">
+        <label
+          >STATUS<select>
+            <option>Todos os Status</option>
+            <option>Disponível</option>
+            <option>Vendido</option>
+            <option>Pendente</option>
+          </select></label
+        >
+        <label
+          >TIPO<select>
+            <option>Todos os Tipos</option>
+            <option>Cobertura</option>
+            <option>Mansão</option>
+            <option>Apartamento Luxo</option>
+          </select></label
+        >
+        <label
+          >LOCALIZAÇÃO<select>
+            <option>São Paulo, SP</option>
+            <option>Rio de Janeiro, RJ</option>
+            <option>Curitiba, PR</option>
+          </select></label
+        >
+        <label
+          >ORDENAR POR<select>
+            <option>Mais Recentes</option>
+            <option>Maior Preço</option>
+            <option>Menor Preço</option>
+          </select></label
+        >
+      </section>
+
+      <section class="tabela">
+        <div class="rolagem">
+          <table>
+            <thead>
+              <tr>
+                <th>Imóvel</th>
+                <th>Localização</th>
+                <th>Preço</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="imovel">
+                    <img
+                      alt="Mansão moderna"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6juQbbwGrfpzoV63ontgDQNEyiat89trCIlynaZ3L3c5ILNZ9kyFrPt7qD9CTBYxqGaTjPkdk3lANRfO60XpSWmoUepGaFBJu9i_dFD7y8MTWmrPujU_Aq3l0fqw8UOcqwuf325Oz7y-dE7jREs5y0GJBH_OjLQn68EHH8euZImHF-Mamj-s80QbaX14WTSiOv5Jg39KK8ZWhE_KFjj51MFweLMFI5LaIAc1v-vbiiE9stabsWvr_sEIrWIEZk-24_rrX1w73Og"
+                    />
+                    <div>
+                      <strong>The Glass Pavilion</strong
+                      ><small>ID: LX-4092</small>
+                    </div>
+                  </div>
+                </td>
+                <td>Jardins, SP<small>4 Suítes • 520m²</small></td>
+                <td><b>R$ 12.500.000</b></td>
+                <td><span class="status disponivel">Disponível</span></td>
+                <td>
+                  <div class="acoes-linha">
+                    <button><span class="icone">visibility</span></button
+                    ><button><span class="icone">edit</span></button
+                    ><button class="excluir">
+                      <span class="icone">delete</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imovel">
+                    <img
+                      alt="Apartamento de luxo"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb2VsMZzaPYNdmvPv_Q1-kZSmvw2og4AxOZMwyN7nsaBewuS6NRTeNX2RmBhyEtuFcAwQcoF13VdZHihwZgHkEJfeLQfzU5r26eZfoFItHk1WNf1DaG5NyYc9ccbXyvNtkRweyJI_kxHDnmq7VOupFYxTXUyHymWQERyOrz2YgYMRxWjoRnR3Pek8Vx0jXbAQxXyk46HS1GBD8Beg-nLd0UuSXSQgv914kARg9bDeEG-laNHVFXCikPe8zfNSm0cuZrSKD2CeBKA"
+                    />
+                    <div>
+                      <strong>Skyline Penthouse</strong
+                      ><small>ID: LX-5110</small>
+                    </div>
+                  </div>
+                </td>
+                <td>Ipanema, RJ<small>3 Suítes • 340m²</small></td>
+                <td><b>R$ 8.900.000</b></td>
+                <td><span class="status pendente">Pendente</span></td>
+                <td>
+                  <div class="acoes-linha">
+                    <button><span class="icone">visibility</span></button
+                    ><button><span class="icone">edit</span></button
+                    ><button class="excluir">
+                      <span class="icone">delete</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imovel">
+                    <img
+                      alt="Villa contemporânea"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpdBANQ2HHK3OahBpItl7KdO3bM5rcZ8Zq8cxP1oOJHC9XBHQY1RTIIHXAEGKpZOX9DnJBofkL_raFIYPX-NPo29yCiknszJUeXTcnl03at76N-X2kfoXTUg0LHix6gCHDnZbud8fJMBVWVDzLVwo0wg2qfBL3hOzpYJtOHoDhF1wtRMsu1rUZ7EE2QKjIaHHZwhDQv9yW4NjR7jDD1hTrpVE-GgV3M3DNhD2-74bm_fIZaMp4m-EHtfR40-40qpBo2RA261vNog"
+                    />
+                    <div>
+                      <strong>Concrete Garden Villa</strong
+                      ><small>ID: LX-3022</small>
+                    </div>
+                  </div>
+                </td>
+                <td>Alphaville, SP<small>5 Suítes • 680m²</small></td>
+                <td><b>R$ 15.200.000</b></td>
+                <td><span class="status vendido">Vendido</span></td>
+                <td>
+                  <div class="acoes-linha">
+                    <button><span class="icone">visibility</span></button
+                    ><button><span class="icone">edit</span></button
+                    ><button class="excluir">
+                      <span class="icone">delete</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="imovel">
+                    <img
+                      alt="Casa com vista para o mar"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw44JaDbacojZEb03hb-_gEFj5YI8niIVmkZn0IZ-iLHZd44Rw8W3lSBvA4YDMf6BQimb32Ral89yfS3eb3IgKDrEfT5pxUZUfcXFida5heZ-_lXfNI6xlha0zu8s6nLJp2NScYrUIV4dWIXYqTeU-1pskqhu6yx1eUEZkamtlXM-OkKRamMA7gmFviGcb2dc8QmxMjhritxRQ02o69VBA7sSAsko6qzWjZoTYsveUi_NAToa8eFUuazEQqunEdTJPEcEd0g9Ucg"
+                    />
+                    <div>
+                      <strong>Oceania Cliffside</strong
+                      ><small>ID: LX-9981</small>
+                    </div>
+                  </div>
+                </td>
+                <td>Angra dos Reis, RJ<small>6 Suítes • 1.200m²</small></td>
+                <td><b>R$ 28.000.000</b></td>
+                <td><span class="status disponivel">Disponível</span></td>
+                <td>
+                  <div class="acoes-linha">
+                    <button><span class="icone">visibility</span></button
+                    ><button><span class="icone">edit</span></button
+                    ><button class="excluir">
+                      <span class="icone">delete</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="paginacao">
+          <p>Mostrando 1 a 4 de 24 imóveis</p>
+          <div>
+            <button disabled><span class="icone">chevron_left</span></button>
+            <button class="ativo">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button><span class="icone">chevron_right</span></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../js/admin.js" defer></script>
+  </body>
+</html>

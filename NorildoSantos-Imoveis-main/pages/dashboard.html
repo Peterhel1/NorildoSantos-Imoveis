@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Dashboard | Norildo Santos — Administração</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/admin.css" />
+  </head>
+  <body class="admin-body">
+    <script src="../js/icons.js"></script>
+
+    <div class="admin">
+      <!-- Barra lateral -->
+      <aside class="sidebar" id="sidebar" aria-label="Menu administrativo">
+        <div class="sidebar__brand">
+          <a href="../index.html">Norildo Santos</a>
+          <span>Painel de Gestão</span>
+        </div>
+
+        <nav class="sidebar__nav" aria-label="Seções da administração">
+          <a class="sidebar__link" href="dashboard.html" aria-current="page">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-dashboard" />
+            </svg>
+            Dashboard
+          </a>
+          <a class="sidebar__link" href="admImoveis.html">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-building" />
+            </svg>
+            Meus Imóveis
+          </a>
+          <a class="sidebar__link" href="#leads">
+            <svg class="icon" aria-hidden="true"><use href="#i-leads" /></svg>
+            Leads
+          </a>
+          <a class="sidebar__link" href="relatorios.html">
+            <svg class="icon" aria-hidden="true"><use href="#i-reports" /></svg>
+            Relatórios
+          </a>
+          <a class="sidebar__link" href="#configuracoes">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-settings" />
+            </svg>
+            Configurações
+          </a>
+        </nav>
+
+        <div class="sidebar__foot">
+          <a class="sidebar__link" href="#suporte">
+            <svg class="icon" aria-hidden="true"><use href="#i-help" /></svg>
+            Suporte
+          </a>
+          <a class="sidebar__link" href="../index.html">
+            <svg class="icon" aria-hidden="true"><use href="#i-logout" /></svg>
+            Sair
+          </a>
+        </div>
+      </aside>
+      <div class="sidebar-backdrop" aria-hidden="true"></div>
+
+      <div class="admin__main">
+        <!-- Barra superior -->
+        <header class="topbar">
+          <h1 class="topbar__title">Dashboard</h1>
+
+          <div class="topbar__search">
+            <svg class="icon" aria-hidden="true"><use href="#i-search" /></svg>
+            <input
+              type="search"
+              placeholder="Buscar imóveis, leads..."
+              aria-label="Buscar imóveis e leads"
+              data-filter="#tabela-imoveis"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="topbar__actions">
+            <button class="icon-btn" type="button" aria-label="Notificações">
+              <svg class="icon" aria-hidden="true"><use href="#i-bell" /></svg>
+            </button>
+            <a class="btn btn--primary btn--sm" href="#novo-imovel">
+              <svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg>
+              <span class="btn-label">Novo Imóvel</span>
+            </a>
+          </div>
+        </header>
+
+        <main class="admin-content">
+          <!-- Indicadores -->
+          <section class="stats" aria-label="Indicadores do mês">
+            <article class="stat">
+              <div class="stat__top">
+                <h2 class="stat__label">Total de Imóveis</h2>
+                <span class="stat__icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-house" />
+                  </svg>
+                </span>
+              </div>
+              <p class="stat__value">142</p>
+              <p class="stat__trend">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-trending" />
+                </svg>
+                +12% este mês
+              </p>
+            </article>
+
+            <article class="stat">
+              <div class="stat__top">
+                <h2 class="stat__label">Imóveis Vendidos</h2>
+                <span class="stat__icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-tag" />
+                  </svg>
+                </span>
+              </div>
+              <p class="stat__value">28</p>
+              <p class="stat__trend">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-trending" />
+                </svg>
+                +5% este mês
+              </p>
+            </article>
+
+            <article class="stat">
+              <div class="stat__top">
+                <h2 class="stat__label">Solicitações Recebidas</h2>
+                <span class="stat__icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-mail" /></svg
+                ></span>
+              </div>
+              <p class="stat__value">89</p>
+              <p class="stat__trend">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-trending" />
+                </svg>
+                +24% este mês
+              </p>
+            </article>
+          </section>
+
+          <!-- Imóveis recentes -->
+          <section
+            class="section-block"
+            id="meus-imoveis"
+            aria-labelledby="titulo-recentes"
+          >
+            <div class="panel-head">
+              <div>
+                <h2 id="titulo-recentes">Imóveis Recentes</h2>
+                <p>Gerencie seu portfólio de propriedades.</p>
+              </div>
+              <a class="panel-head__link" href="#meus-imoveis">
+                Ver todos
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="table-card">
+              <div class="table-wrap">
+                <table class="data-table" id="tabela-imoveis">
+                  <thead>
+                    <tr>
+                      <th scope="col">Propriedade</th>
+                      <th scope="col">Valor</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Data</th>
+                      <th scope="col">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="property">
+                          <span class="thumb"
+                            ><img
+                              src="img/imovel-1.jpg"
+                              alt=""
+                              loading="lazy"
+                              data-fallback
+                          /></span>
+                          <div>
+                            <strong class="property__name"
+                              >Cobertura Duplex Jardins</strong
+                            >
+                            <span class="property__sub">São Paulo, SP</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="num">R$ 4.500.000</td>
+                      <td><span class="pill">Disponível</span></td>
+                      <td class="muted">12 Out, 2024</td>
+                      <td>
+                        <div class="actions">
+                          <button
+                            class="icon-btn"
+                            type="button"
+                            aria-label="Editar Cobertura Duplex Jardins"
+                          >
+                            <svg class="icon" aria-hidden="true">
+                              <use href="#i-pencil" />
+                            </svg>
+                          </button>
+                          <button
+                            class="icon-btn"
+                            type="button"
+                            data-action="excluir"
+                            aria-label="Excluir Cobertura Duplex Jardins"
+                          >
+                            <svg class="icon" aria-hidden="true">
+                              <use href="#i-trash" />
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="property">
+                          <span class="thumb"
+                            ><img
+                              src="img/imovel-2.jpg"
+                              alt=""
+                              loading="lazy"
+                              data-fallback
+                          /></span>
+                          <div>
+                            <strong class="property__name"
+                              >Casa Contemporânea Alphaville</strong
+                            >
+                            <span class="property__sub">Barueri, SP</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="num">R$ 3.200.000</td>
+                      <td><span class="pill pill--sold">Vendido</span></td>
+                      <td class="muted">05 Out, 2024</td>
+                      <td>
+                        <div class="actions">
+                          <button
+                            class="icon-btn"
+                            type="button"
+                            aria-label="Editar Casa Contemporânea Alphaville"
+                          >
+                            <svg class="icon" aria-hidden="true">
+                              <use href="#i-pencil" />
+                            </svg>
+                          </button>
+                          <button
+                            class="icon-btn"
+                            type="button"
+                            data-action="excluir"
+                            aria-label="Excluir Casa Contemporânea Alphaville"
+                          >
+                            <svg class="icon" aria-hidden="true">
+                              <use href="#i-trash" />
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr class="table-empty" hidden>
+                      <td colspan="5">Nenhum imóvel encontrado.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="../js/admin.js" defer></script>
+  </body>
+</html>

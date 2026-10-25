@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Imóveis - Norildo Santos Corretor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/comum.css" />
+    <link rel="stylesheet" href="../styles/imoveis.css" />
+    <script src="../js/imoveis.js" defer></script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div>
+        <div class="logo">Norildo Santos</div>
+        <nav>
+          <a href="../index.html">Início</a>
+          <a class="ativo" href="imoveis.html">Imóveis</a>
+          <a href="#">Vender</a>
+          <a href="#">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <div class="acoes">
+          <a href="login.html">Entrar</a>
+          <button class="botao">Anunciar</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="pagina">
+      <aside class="filtros caixa">
+        <h2>Filtros</h2>
+        <fieldset>
+          <legend>Faixa de Preço</legend>
+          <p class="faixa"><span>R$ 500k</span><span>R$ 5M+</span></p>
+          <input
+            class="controle-preco"
+            max="5000000"
+            min="500000"
+            type="range"
+            value="2500000"
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Tipo de Imóvel</legend>
+          <label><input checked type="checkbox" /> Casa</label>
+          <label><input checked type="checkbox" /> Apartamento</label>
+          <label><input type="checkbox" /> Cobertura</label>
+        </fieldset>
+        <fieldset>
+          <legend>Quartos</legend>
+          <div class="opcoes">
+            <button>1</button><button>2</button><button class="ativo">3</button
+            ><button>4+</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Banheiros</legend>
+          <div class="opcoes">
+            <button>1</button><button class="ativo">2</button
+            ><button>3+</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Vagas</legend>
+          <div class="opcoes">
+            <button>1</button><button>2</button><button>3+</button>
+          </div>
+        </fieldset>
+        <button class="botao">Aplicar Filtros</button>
+      </aside>
+
+      <section class="resultados">
+        <div class="busca caixa">
+          <label class="pesquisa"
+            ><span class="icone">search</span
+            ><input
+              placeholder="Buscar por bairro, rua ou código..."
+              type="text"
+          /></label>
+          <label class="ordem"
+            >Ordenar por:
+            <select>
+              <option>Mais recentes</option>
+              <option>Menor preço</option>
+              <option>Maior preço</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="grade-imoveis">
+          <article class="cartao-imovel caixa">
+            <figure>
+              <img
+                alt="Casa moderna com piscina"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4kyoQtcOPlc3IvXIXEjIC2y1c6aSc9qMrWj6VHxLhtFsT3bcArmAKYLtCya5GNBuC4abD-RSDNRFGeDIdv4YQTX5qHUwknHXu4KZ8iZiam2eQs0wrhy0LWIpDM6Vk4Q7dfpcDW6sn0HxGSmDX5-Xo4socwi3la9mCNHh-W6M22-l1NqqYICzrNS_W0PTlyNTlOTPPRZZNBjSe9HplEEB6nY7O50KqUkhSkUICFrStM1WcGjZ6TdGZyg0Lx1fJ0XMDMTX3u_Cm5A"
+              />
+              <span>Venda</span>
+            </figure>
+            <div>
+              <strong>R$ 3.200.000</strong>
+              <h3>Mansão Contemporânea em Condomínio</h3>
+              <p>
+                <span class="icone">location_on</span> Jardim das Oliveiras, São
+                Paulo
+              </p>
+              <ul>
+                <li><span class="icone">bed</span> 4</li>
+                <li><span class="icone">bathtub</span> 5</li>
+                <li><span class="icone">directions_car</span> 3</li>
+                <li><span class="icone">straighten</span> 350m²</li>
+              </ul>
+              <button class="botao-contorno">Ver Detalhes</button>
+            </div>
+          </article>
+
+          <article class="cartao-imovel caixa">
+            <figure>
+              <img
+                alt="Apartamento de luxo com vista"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIKBAI0Blb51686KW1NMmVT8cPQpuGCcyntw0wt3OTIc7mrw1pSZ-vskzJsIhMXEHTFgvJ1BAvBStk6wcVsXq6kSj-riAOJn1HM_o20Nlq1jUuGbtxyjGCAoRuXxowOGeSHSCAD4n7xzCIJWtuGMQhyqHyrIgV0kT1yg1EJXIy91BnLp55T7H89AZ-fGHebhV79EQrr7IMsDx-pX8CtXFXabQCzVQo2pTdBbzWKKkrULoQS9cw16t0vDPBvfvae8jqRINTzg6k_Q"
+              />
+            </figure>
+            <div>
+              <strong>R$ 1.850.000</strong>
+              <h3>Apartamento Alto Padrão com Vista Mar</h3>
+              <p><span class="icone">location_on</span> Meia Praia, Itapema</p>
+              <ul>
+                <li><span class="icone">bed</span> 3</li>
+                <li><span class="icone">bathtub</span> 3</li>
+                <li><span class="icone">directions_car</span> 2</li>
+                <li><span class="icone">straighten</span> 180m²</li>
+              </ul>
+              <button class="botao-contorno">Ver Detalhes</button>
+            </div>
+          </article>
+
+          <article class="cartao-imovel caixa">
+            <figure>
+              <img
+                alt="Casa aconchegante com jardim"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZUkHrhhEYYqKF9_P77lT9sUGoBHfEBT0RjCXiL4MwHrVugOql0sz9RH9B20NO98GtpadAbj2IdnPxSTwm-LYFqHMh2jIIAcAQidWuBDBflhhZvNMCGv54S757W3ZygaxVxRVUgpSrQ76mMBcmtX-2ZsOh8_KgJy2mVbVBupqzaWXbD41aRdv22MV1qVbRfVJvZIziUkNELlh5Uzrg7MEaHHbfz_8xnfiRc8j9ofprwQ6TRzZA-xMIw21Sr9hHrBVnPy-BgTggdA"
+              />
+            </figure>
+            <div>
+              <strong>R$ 2.100.000</strong>
+              <h3>Residência Clássica com Amplo Jardim</h3>
+              <p><span class="icone">location_on</span> Alphaville, Barueri</p>
+              <ul>
+                <li><span class="icone">bed</span> 4</li>
+                <li><span class="icone">bathtub</span> 4</li>
+                <li><span class="icone">directions_car</span> 4</li>
+                <li><span class="icone">straighten</span> 420m²</li>
+              </ul>
+              <button class="botao-contorno">Ver Detalhes</button>
+            </div>
+          </article>
+        </div>
+
+        <nav class="paginacao">
+          <button><span class="icone">chevron_left</span></button>
+          <button class="ativo">1</button>
+          <button>2</button>
+          <button>3</button>
+          <span>...</span>
+          <button><span class="icone">chevron_right</span></button>
+        </nav>
+      </section>
+    </main>
+
+    <footer class="rodape" id="contato">
+      <div>
+        <div>
+          <div class="logo">Norildo Santos</div>
+          <p>
+            Especialista em imóveis de alto padrão. Encontre a residência
+            perfeita para o seu estilo de vida.
+          </p>
+          <small
+            >© 2024 Norildo Santos - Corretor de Imóveis. CRECI J-0000. Todos os
+            direitos reservados.</small
+          >
+        </div>
+        <div>
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Mapa do Site</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="#">contato@norildosantos.com.br</a></li>
+            <li><a href="#">(11) 99999-9999</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Norildo Santos | Corretor de Imóveis de Alto Padrão</title>
+  <meta name="description" content="Assessoria imobiliária de alto padrão focada em exclusividade, segurança e resultados excepcionais para clientes exigentes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <!-- Ícones (sprite SVG) -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M14.1 5.55a2 2 0 0 0 1.79 0l3.66-1.83A1 1 0 0 1 21 4.62v12.76a1 1 0 0 1-.55.89l-4.55 2.28a2 2 0 0 1-1.79 0l-4.21-2.1a2 2 0 0 0-1.79 0l-3.66 1.83A1 1 0 0 1 3 19.38V6.62a1 1 0 0 1 .55-.89l4.55-2.28a2 2 0 0 1 1.79 0z"/><path d="M15 5.76v15"/><path d="M9 3.24v15"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></symbol>
+    <symbol id="i-bath" viewBox="0 0 24 24"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.68 3 4 3.68 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><path d="M2 12h20"/><path d="M7 19v2"/><path d="M17 19v2"/><path d="M10 5 8 7"/></symbol>
+    <symbol id="i-area" viewBox="0 0 24 24"><path d="M22 18a2 2 0 0 1-2 2H3c-1.1 0-1.3-.6-.4-1.3L20.4 4.3c.9-.7 1.6-.4 1.6.7Z"/><path d="M13.5 20v-3"/><path d="M8.5 20v-3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><path d="m12.99 6.74 1.93 3.44"/><path d="M19.14 12a10 10 0 0 1-14.27 0"/><path d="m21 21-2.16-3.84"/><path d="m3 21 8.02-14.26"/><circle cx="12" cy="5" r="2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8"/><path d="M8 13h5"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+  </svg>
+
+  <!-- Cabeçalho -->
+  <header class="site-header">
+    <div class="header__inner">
+      <a class="logo" href="#inicio" aria-label="Norildo Santos — página inicial">Norildo Santos</a>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="#inicio" aria-current="page">Início</a>
+        <a href="pages/imoveis.html">Imóveis</a>
+        <a href="#vender">Vender</a>
+        <a href="#sobre">Sobre</a>
+        <a href="pages/contato.html">Contato</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="link-entrar" href="pages/login.html">Entrar</a>
+        <a class="btn btn--primary btn--sm" href="#anunciar">Anunciar</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero__media">
+        <img src="img/hero.jpg" alt="Residência contemporânea de alto padrão ao anoitecer, com piscina" data-fallback>
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <h1>Exclusividade e Precisão em Cada Detalhe</h1>
+        <p class="hero__subtitle">
+          Descubra propriedades que definem o verdadeiro significado de alto padrão.<br>
+          Sua próxima conquista começa aqui.
+        </p>
+
+        <form class="search" id="form-busca" role="search" aria-label="Buscar imóveis">
+          <div class="field">
+            <label for="busca-q">Busca por Palavra</label>
+            <div class="field__control">
+              <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+              <input id="busca-q" name="q" type="text" placeholder="Nome do condomínio, ref..." autocomplete="off">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="busca-cidade">Localização</label>
+            <div class="field__control">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <select id="busca-cidade" name="cidade">
+                <option value="">Qualquer Cidade</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Barueri">Barueri</option>
+              </select>
+              <svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="busca-bairro">Bairro</label>
+            <div class="field__control">
+              <svg class="icon" aria-hidden="true"><use href="#i-map"/></svg>
+              <select id="busca-bairro" name="bairro">
+                <option value="">Todos os Bairros</option>
+                <option value="Jardins">Jardins</option>
+                <option value="Alphaville">Alphaville</option>
+                <option value="Itaim Bibi">Itaim Bibi</option>
+              </select>
+              <svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron"/></svg>
+            </div>
+          </div>
+
+          <button class="btn btn--primary search__submit" type="submit">
+            Buscar
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Imóveis em alta -->
+    <section class="section featured" id="imoveis">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Imóveis em Alta</h2>
+            <p>Seleção curada de propriedades exclusivas.</p>
+          </div>
+          <a class="link-more" href="#imoveis">Ver todos <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="cards">
+          <article class="card" data-cidade="São Paulo" data-bairro="Jardins">
+            <a class="card__link" href="#imovel-cobertura-jardins">
+              <div class="card__media">
+                <img src="img/imovel-1.jpg" alt="Sala de estar ampla da cobertura duplex nos Jardins" loading="lazy" data-fallback>
+                <span class="badge">Venda</span>
+              </div>
+              <div class="card__body">
+                <p class="card__price">R$ 4.500.000</p>
+                <h3 class="card__title">Cobertura Duplex Jardins</h3>
+                <p class="card__location">
+                  <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                  Jardins, São Paulo
+                </p>
+                <ul class="card__meta" aria-label="Características">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-bed"/></svg><span>4</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-bath"/></svg><span>5</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-area"/></svg><span>320m²</span></li>
+                </ul>
+              </div>
+            </a>
+          </article>
+
+          <article class="card" data-cidade="Barueri" data-bairro="Alphaville">
+            <a class="card__link" href="#imovel-casa-alphaville">
+              <div class="card__media">
+                <img src="img/imovel-2.jpg" alt="Fachada da casa contemporânea em Alphaville" loading="lazy" data-fallback>
+              </div>
+              <div class="card__body">
+                <p class="card__price">R$ 8.200.000</p>
+                <h3 class="card__title">Casa Contemporânea Alphaville</h3>
+                <p class="card__location">
+                  <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                  Alphaville, Barueri
+                </p>
+                <ul class="card__meta" aria-label="Características">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-bed"/></svg><span>5</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-bath"/></svg><span>6</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-area"/></svg><span>650m²</span></li>
+                </ul>
+              </div>
+            </a>
+          </article>
+
+          <article class="card" data-cidade="São Paulo" data-bairro="Itaim Bibi">
+            <a class="card__link" href="#imovel-apto-itaim">
+              <div class="card__media">
+                <img src="img/imovel-3.jpg" alt="Cozinha sofisticada do apartamento de alto padrão no Itaim" loading="lazy" data-fallback>
+              </div>
+              <div class="card__body">
+                <p class="card__price">R$ 3.100.000</p>
+                <h3 class="card__title">Apto Alto Padrão Itaim</h3>
+                <p class="card__location">
+                  <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                  Itaim Bibi, São Paulo
+                </p>
+                <ul class="card__meta" aria-label="Características">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-bed"/></svg><span>3</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-bath"/></svg><span>4</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-area"/></svg><span>180m²</span></li>
+                </ul>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <p class="empty" id="sem-resultados" hidden>
+          Nenhum imóvel encontrado para essa busca. Tente outros termos ou limpe os filtros.
+        </p>
+      </div>
+    </section>
+
+    <!-- A Arte de Bem Viver -->
+    <section class="section about" id="sobre">
+      <div class="container about__grid">
+        <div class="about__text">
+          <h2>A Arte de Bem Viver</h2>
+          <p class="about__lead">
+            Elevamos a experiência de compra e venda de imóveis através de um serviço
+            focado em transparência, rigor profissional e estética sofisticada.
+          </p>
+
+          <ul class="features">
+            <li class="feature">
+              <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <div>
+                <h3>Confiança Absoluta</h3>
+                <p>Transações seguras, sigilo garantido e assessoria jurídica completa.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg></span>
+              <div>
+                <h3>Modernidade &amp; Visão</h3>
+                <p>Curadoria de imóveis com arquitetura singular e alto potencial de valorização.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
+              <div>
+                <h3>Atendimento Personalizado</h3>
+                <p>Compreendemos seu estilo de vida para encontrar a propriedade ideal.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <figure class="about__photo">
+          <img src="img/corretor.jpg" alt="Norildo Santos, corretor de imóveis de alto padrão" loading="lazy" data-fallback>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer" id="contato">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="footer__logo" href="#inicio">
+          <svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>
+          Norildo Santos
+        </a>
+        <p>
+          Assessoria imobiliária de alto padrão focada em exclusividade,
+          segurança e resultados excepcionais para clientes exigentes.
+        </p>
+        <p class="footer__copy">
+          &copy; <span id="ano">2024</span> Norildo Santos - Corretor de Imóveis. CRECI J-0000. Todos os direitos reservados.
+        </p>
+      </div>
+
+      <nav class="footer__col" aria-label="Navegação do rodapé">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#imoveis">Imóveis</a></li>
+          <li><a href="#vender">Vender</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="pages/contato.html">Contato</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Links legais">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#privacidade">Política de Privacidade</a></li>
+          <li><a href="#termos">Termos de Uso</a></li>
+          <li><a href="#mapa">Mapa do Site</a></li>
+          <li><a href="#trabalhe-conosco">Trabalhe Conosco</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de chat -->
+  <a class="chat-fab" href="pages/contato.html" aria-label="Falar com o corretor">
+    <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
+  </a>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
